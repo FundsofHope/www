@@ -1,2 +1,2 @@
 # www
-The Website FunsofHope.org
+The Website FundsofHope.org
