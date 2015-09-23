@@ -1,0 +1,20 @@
+<h1>Register new Customer</h1>
+<section class="register">
+    <form name="register" novalidate>
+        <input type="text" name="name" placeholder="Enter Name"><br/>
+        <input type="number" name="mobile" placeholder="Enter phone"><br/>
+        <input type="email" name="email" placeholder="Enter Email" autofocus
+               ng-model="user.email" ng-required="true"/>
+        <p class="error validationerror"
+           ng-show="loginform.email.$invalid && loginform.email.$touched">
+            Enter a Valid Mail Id
+        </p><br/>
+        <input type="password" name="password" placeholder="Enter Password"
+               ng-model="user.password" ng-required="true"/>
+        <p class="error validationerror"
+           ng-show="loginform.password.$invalid && loginform.password.$touched">
+            Enter a Valid Password
+        </p><br/>
+        <button type="submit" class="btn" ng-disabled="loginform.$invalid">Register</button>
+    </form>
+</section>

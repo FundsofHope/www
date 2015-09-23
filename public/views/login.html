@@ -1,0 +1,20 @@
+<h1>Hello {{name}}</h1>
+<h1>Please Log In</h1>
+<section class="login">
+    <form name="loginform" novalidate>
+        <input type="email" name="email" placeholder="Enter Email" autofocus
+               ng-model="user.email" ng-required="true"/>
+        <p class="error validationerror"
+           ng-show="loginform.email.$invalid && loginform.email.$touched">
+            Enter a Valid Mail Id
+        </p>
+        <input type="password" name="password" placeholder="Enter Password"
+               ng-model="user.password" ng-required="true"/>
+        <p class="error validationerror"
+                ng-show="loginform.password.$invalid && loginform.password.$touched">
+            Enter a Valid Password
+        </p>
+        <button type="submit" class="btn" ng-disabled="loginform.$invalid">Log In</button>
+        <p> or <br /> <a href="#/register">Sign Up</a></p>
+    </form>
+</section>
