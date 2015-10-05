@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$" libraries="{minor_start node_modules}" />
-    <file url="PROJECT" libraries="{Node.js v0.12.7 Core Modules, gulp-DefinitelyTyped, mongoose-DefinitelyTyped}" />
-    <includedPredefinedLibrary name="ECMAScript 6" />
+    <file url="file://$PROJECT_DIR$" libraries="{newproject node_modules}" />
+    <file url="PROJECT" libraries="{Node.js v0.12.7 Core Modules, mongoose-DefinitelyTyped}" />
     <includedPredefinedLibrary name="Node.js Globals" />
   </component>
 </project>

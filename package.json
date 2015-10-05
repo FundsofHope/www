@@ -1,18 +1,18 @@
 {
-  "name": "minor_start",
-  "version": "1.0.0",
-  "description": "Minor Backend",
+  "name": "minor",
+  "version": "0.0.1",
+  "description": "FundsofHope",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Aditya",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.13.3",
+    "body-parser": "^1.14.1",
     "express": "^4.13.3",
-    "mongoose": "^4.1.3",
+    "mongoose": "^4.1.9",
     "morgan": "^1.6.1"
   }
 }
