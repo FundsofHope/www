@@ -1,6 +1,6 @@
 module.exports = {
 
-	"database": "mongodb:///Applications/MEAN/mongodb/tmp/mongodb-27017.sock/minor",
+	"database": "mongodb://root:pass@ds059672.mongolab.com:59672/userstory",
 	"port": process.env.PORT || 3000,
 	"secretKey": "password"
 
