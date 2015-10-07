@@ -54,7 +54,7 @@ angular.module('myApp', []).controller('namescontroller', ['$scope', 'articleDat
     getArticles: function() {
       var promise;
       if(data === null) {
-        promise = $http.get('./js/project-1.json').then(function(response){
+        promise = $http.get('../js/project-1.json').then(function(response){
           // cache the response
           data = response;
           return response;
