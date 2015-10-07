@@ -25,7 +25,7 @@ var ngoapi = require('./app/routes/ngoapi')(app, express);
 app.use('/ngo', ngoapi);
 
 
-app.get('*', function(req, res) {
+app.get('/', function(req, res) {
     res.sendFile(__dirname + '/public/views/index.html');
 });
 
