@@ -18,6 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 
+app.use(express.static(__dirname+ '/public'));
+
 var userapi = require('./app/routes/userapi')(app, express);
 app.use('/user', userapi);
 
@@ -25,8 +27,8 @@ var ngoapi = require('./app/routes/ngoapi')(app, express);
 app.use('/ngo', ngoapi);
 
 
-app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/public/views/index.html');
+app.get('*', function(req, res) {
+    res.sendFile(__dirname + '/public/app/views/index.html');
 });
 
 app.listen(config.port, function(err) {

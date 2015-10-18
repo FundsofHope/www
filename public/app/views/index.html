@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>fundsOfHope.org::FAQs:NGO Model</title>
+  <title>fundsOfHope.org::Home</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+<script src="/js/angular.js"></script>
+<script src="/js/controller.js"></script>
+<link src="app/views/search_style.css"></link>
    <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
@@ -21,6 +25,36 @@
   </style>
  
 </head>
+<style type="text/css">
+	#img2{
+		width: 340px;
+		height: 127px;
+	}
+	#img3{
+		width: 340px;
+		height: 127px;
+	}
+	#img4{
+		width: 340px;
+		height: 127px;
+	}
+	#img5{
+		width: 340px;
+		height: 127px;
+	}			
+	#img2:hover{
+		-webkit-filter: invert(100%);
+	}
+	#img3:hover{
+		-webkit-filter: invert(100%);
+	}
+	#img4:hover{
+		-webkit-filter: invert(100%);
+	}
+	#img5:hover{
+		-webkit-filter: invert(100%);
+	}		
+</style>
 <body>
 
 
@@ -215,145 +249,253 @@
 </div>
 
 
-  <div class="jumbotron">
+
+ <!--  HOME IMAGES WHY?  --><!--  HOME IMAGES WHY?  --><!--  HOME IMAGES WHY?  --><!--  HOME IMAGES WHY?  --><!--  HOME IMAGES WHY?  --><!--  HOME IMAGES WHY?  -->
+<div class="imgslider1">
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active"> 
+	
+   <img src="app/views/images/carousel/bg-1.jpg" alt="one">
+
+	<div class="carousel-caption">
+    <h3>Education</h3>
+    <p>Education is the movement from darkness to light.</p>
+  </div>
+	</div>
     
+    <div class="item">
+     <img src="app/views/images/carousel/bg-2.jpg" alt="two">
+    <div class="carousel-caption">
+    <h3>Food</h3>
+    <p>Laughter is brightest, where food is best.</p>
+  </div>
+	</div>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h1>FAQs</h1>
-                    <p>Helping You Understand Us Better</p>
-                </div>
-                <div class="col-sm-6">
-                    <ul class="breadcrumb pull-right">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active">FAQs</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <div class="item">
+     <img src="app/views/images/carousel/bg-3.jpg" alt="three">
+    <div class="carousel-caption">
+    <h3>Cleanliness</h3>
+    <p>One who maintain cleanliness, keeps away disease. </p>
+  </div>
+	</div>
+	<div class="item">
+     <img src="app/views/images/carousel/bg-4.jpg" alt="four">
+    <div class="carousel-caption">
+    <h3>Health</h3>
+    <p>Yoga is the journey of the self, to the self, through the self.</p>
+  </div>
+	</div>
+	
+	</div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 </div>
 
-<div class="col-sm-2 col-md-4 col-lg-2">
-<ul class="nav nav-pills nav-stacked">
-  <li role="presentation"><a href="faq.html">How To Help</a></li>
-  <li role="presentation" class="active"><a href="faq-ngomodel.html">NGO Model</a></li>
-  <li role="presentation"><a href="faq-ourpartners.html">About Our Partners</a></li>
-  <li role="presentation"><a href="faq-aboutus.html">About Us</a></li>
-  <li role="presentation"><a href="faq-searchqueries.html">Search Queries</a></li>
-  <li role="presentation"><a href="faq-writetous.html">Write To Us</a></li>
-  </ul>
+
+
+<!-- jumbotron -->
+
+
+<div class="jumbotron" style="background-color: #A9A9F5;">
+
+
+<div class="container">
+
+<div style="margin-left: 15%;" class="col-md-1 col-sm-1 col-lg-2">
+<a href="#" class="thumbnail">
+<img id="img2" src="app/views/images/ngologos/2.jpg">
+</a>
+</div>
+
+<div class="col-md-1 col-sm-1 col-lg-2">
+<a href="#" class="thumbnail">
+<img id="img3" src="app/views/images/ngologos/3.jpg">
+</a>
 </div>
 
 
-<div class="col-sm-3 col-md-6 col-lg-8">
-
-<div class="row">
-
-            <div class="col-lg-12">
-
-                <div id="accordion" class="panel-group">
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a href="#collapseOne" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle collapsed">
-                    Is this a real NGO?
-                  </a>
-                            </h4>
-                        </div>
-                        <div class="panel-collapse collapse" id="collapseOne" style="height: 0px;">
-                            <div class="panel-body">
-							Yes we are a real registered NGO.We are 100% non profit and help to regulate funds to other Big NGOs. 
-							</div>
-                        </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a href="#collapseTwo" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle collapsed">
-                    Why should I use this website to donate?
-                  </a>
-                            </h4>
-                        </div>
-                        <div class="panel-collapse collapse" id="collapseTwo" style="height: 0px;">
-                            <div class="panel-body">
-					Donating through and using our website gives you a better view of your contribution and helps you connect better.		
-							</div>
-                        </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a href="#collapseThree" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle collapsed">
-                    Why are similar NGOs listed on this website?
-                  </a>
-                            </h4>
-                        </div>
-                        <div class="panel-collapse collapse" id="collapseThree">
-                            <div class="panel-body">
-					Different NGOs are listed according to their projects on particular locations.		
-							</div>
-                        </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a href="#collapseFour" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle collapsed">
-                    How many NGOs are registered on this website?
-                  </a>
-                            </h4>
-                        </div>
-                        <div class="panel-collapse collapse" id="collapseFour">
-                            <div class="panel-body">
-							More than 25.
-							</div>
-                        </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a href="#collapseFive" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle collapsed">
-                    What are partners?
-                  </a>
-                            </h4>
-                        </div>
-                        <div class="panel-collapse collapse" id="collapseFive">
-                            <div class="panel-body">
-							Partners are big companies who regularly help us and pledge their employees to regularly volunteer.
-							</div>
-                        </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a href="#collapseSix" data-parent="#accordion" data-toggle="collapse" class="accordion-toggle collapsed">
-                Is the payment procedure safe?
-                  </a>
-                            </h4>
-                        </div>
-                        <div class="panel-collapse collapse" id="collapseSix">
-                            <div class="panel-body">
-Of course.
-							</div>
-                        </div>
-                    </div>
+<div class="col-md-1 col-sm-1 col-lg-2">
+<a href="#" class="thumbnail">
+<img id="img4" src="app/views/images/ngologos/5.jpg">
+</a>
+</div>
 
 
-                </div>
+<div class="col-md-1 col-sm-1 col-lg-2">
+<a href="#" class="thumbnail">
+<img id="img5" src="app/views/images/ngologos/6.jpg">
+</a>
+</div>
 
-            </div>
 
-        </div>
+
+
+</div>
+
+
+
+</div>
+
+
+<!-- app space-->
   
-  <br>
-  
+<div class="jumbotron" style="background-color: #ea8662;">
+<div class="container" style="color: #362f2d;">
+<div class="col-md-4 col-sm-6 col-lg-8">
+
+	<div id="main-container" ng-controller="namescontroller" ng-app="myApp">
+
+			<h3><label id="filter">Search Projects:</label></h3>
+<div class="col-sm-4 col-lg-7">
+			<p><input id="search-bar" placeholder="find projects" type="text/javascript" ng-model="test"></p>
+			</div>
+		<div class="col-sm-4 col-lg-12">
+
+					<div class="container-fluid">
+				 	<div class="row">
+					    
+						<div class="col-sm-4 col-lg-4" style="background-color:lavender; width: 40%;">
+					    	<h4 style="font-size: 3.5 vw;">
+					    		Project 1
+					    	</h4>
+					    	<img class="image" src="" alt="image">
+					    	<ul>
+								<li ng-repeat="a in custInfo" >
+										{{ (a.name[0].names | filter:test) + ', ' + a.name[0].country }}
+								</li>
+							</ul>
+					    </div>  
+						
+						<div class="col-sm-4 col-lg-1">
+						
+						</div>
+						
+					    <div class="col-sm-4 col-lg-4" style="background-color:lavenderblush;">
+					    	<h4>
+					    		Project 2
+					    	</h4>
+					    	<img class="image" src="" alt="image">
+					    	<ul>
+								<li ng-repeat="x in custInfo ">
+										{{ (x.name[1].names | filter:test)  + ', ' + x.name[1].country  }}
+								</li>
+							</ul>
+					    </div>
+						
+						<div class="col-sm-4 col-lg-1">
+						
+						</div>
+						
+						
+					    <div class="col-sm-4 col-lg-4" style="background-color:lavender; width: 40%;">
+					    	<h4>
+					    		Project 3
+					    	</h4>
+					    	<img class="image" src="" alt="image">
+					    	<ul>		    	
+								<li ng-repeat="x in custInfo ">
+										{{ (x.name[2].names | filter:test)  + ', ' + x.name[2].country }}
+								</li>
+							</ul>
+					    </div>
+					
+						
+					</div>
+				</div>
+				
+				
+				</div>
+				
+<div class="col-sm-4 col-lg-12">				
+				
+				
+	    		<div id="container-2" class="container-fluid">
+	    			<div class="row">
+	    				<div class="col-sm-4 col-lg-3" style="background-color:lavender; width: 40%;">
+	    					<h4>
+	    						Project 4
+	    					</h4>
+	    					<img class="image" src="" alt="image" >
+		    				<ul>
+								<li ng-repeat="x in custInfo ">
+										{{ (x.name[3].names | filter:test ) + ', ' + x.name[3].country }}
+								</li>
+							</ul>
+	    				</div>
+						
+						
+						<div class="col-sm-4 col-lg-1">
+						
+						</div>
+						
+						
+	    				<div class="col-sm-4 col-lg-3" style="background-color:lavenderblush; width: 40%;">
+	    					<h4>
+	    						Project 5
+	    					</h4>
+	    					<img class="image" src="" alt="image">
+	    					<ul>
+								<li ng-repeat="x in custInfo | filter:test">
+										{{ (x.name[4].names | filter:test) + ', ' + x.name[4].country  }}
+								</li>
+							</ul>	    					
+	    				</div>
+						
+						<div class="col-sm-4 col-lg-1">
+						
+						</div>
+						
+						
+	   					<div class="col-sm-4 col-lg-3" style="background-color:lavender; width: 40%;">
+	   						<h4>
+	   							Project 6
+	   						</h4>
+	   						<img class="image" src="" alt="image">
+	   						<ul>
+								<li ng-repeat="x in custInfo | filter:test ">
+										{{ (x.name[5].names | filter:test) + ', ' + x.name[5].country  }}
+								</li>
+							</ul>
+	   					</div>
+						
+						
+						<div class="col-sm-4 col-lg-1">
+						
+						</div>
+						
+	     			</div>
+				</div>
+				</div>
+		</div>
+			
+
+			</div>
+  </div>
 </div>
+
+
+
+
+
 
 
 <div class="jumbotron" style="background-color: #2c3e50; color:#c6c9cc">
@@ -426,19 +568,13 @@ Of course.
  
  <div class="col-sm-3">
  </div>
- 
+  </div>
  </div>
- </div>
- 
- 
-
- </div>
+  </div>
 </div>
 
 
 
 
-
 </body>
-
 </html>
