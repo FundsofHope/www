@@ -4,15 +4,27 @@ var morgan = require('morgan');
 var config = require('./config');
 var mongoose = require('mongoose');
 
+var env = process.env.NODE_ENV = process.env.NODE_ENV || 'devlopment';
+
 var app = express();
 
-mongoose.connect(config.database, function(err){
-    if(err){
-        console.log(err);
-    }else {
-        console.log('Connected to DB');
-    }
-});
+if( env === 'production') {
+    mongoose.connect(config.remote_db, function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('Connected to DB');
+        }
+    });
+} else {
+    mongoose.connect(config.local_db, function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('Connected to DB');
+        }
+    });
+}
 
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
@@ -34,6 +46,6 @@ app.listen(config.port, function(err) {
     if(err) {
         console.log(err);
     }else {
-        console.log("Project running on port 3000");
+        console.log("Project running on port - "+config.port);
     }
 });

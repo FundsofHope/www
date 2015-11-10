@@ -10,6 +10,10 @@
     "type": "git",
     "url": "https://github.com/FundsofHope/www.git"
   },
+  "engines": {
+    "node": "0.12.x",
+    "npm": "2.11.x"
+  },
   "author": "Aditya",
   "license": "ISC",
   "dependencies": {
@@ -19,5 +23,8 @@
     "jsonwebtoken": "^5.4.0",
     "mongoose": "^4.1.9",
     "morgan": "^1.6.1"
+  },
+  "devDependencies": {
+    "bower": "^1.6.3"
   }
 }
