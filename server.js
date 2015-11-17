@@ -39,7 +39,7 @@ var ngoapi = require('./app/routes/ngoapi')(app, express);
 app.use('/ngo', ngoapi);
 
 app.get('*', function(req, res) {
-    res.sendFile(__dirname + '/public/app/views/index.html');
+    res.sendFile(__dirname + '/public/views/index.html');
 });
 
 app.listen(config.port, function(err) {
