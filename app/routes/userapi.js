@@ -37,7 +37,7 @@ module.exports = function(app, express) {
                 res.send(err);
                 return;
             }
-            res.json({message: 'User has been Created'});
+            res.json({message: 'User has been Created', code: 2000});
         });
     });
 
