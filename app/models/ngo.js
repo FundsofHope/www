@@ -10,7 +10,11 @@ var ngoSchema = new Schema({
 
     name: String,
     ngoid: { type: String, required: true, index: { unique: true } },
-    password: { type: String, required: true, select: false }
+    password: { type: String, required: true, select: false },
+    email: String,
+    phone: Number,
+    profile: String,
+    address: String
 
 });
 

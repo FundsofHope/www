@@ -26,9 +26,12 @@ app.use('/user', userapi);
 var ngoapi = require('./app/routes/ngoapi')(app, express);
 app.use('/ngo', ngoapi);
 
-
-app.get('*', function(req, res) {
+app.get('/', function(req, res) {
     res.sendFile(__dirname + '/public/app/views/index.html');
+});
+
+app.get('/:getfile', function(req, res){
+    res.sendfile(__dirname + '/public/app/views/' + req.params.getfile);
 });
 
 app.listen(config.port, function(err) {

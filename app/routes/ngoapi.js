@@ -1,6 +1,8 @@
 var Ngo = require('../models/ngo');
 var config = require('../../config');
 
+var Project = require('../models/project');
+
 var secret = config.secretKey;
 
 var webtoken = require('jsonwebtoken');
@@ -29,6 +31,7 @@ module.exports = function(app, express) {
             name: req.body.name,
             ngoid: req.body.ngoid,
             password: req.body.password
+
         });
 
         ngo.save(function(err) {
@@ -107,9 +110,39 @@ module.exports = function(app, express) {
 
     });
 
-    api.get('/', function(req, res){
-        res.json({message: "Welcome to Home!"});
-    });
+    api.post('/project/new', function(req, res) {
+
+        var project = new Project({
+            host: req.decoded.id,
+            title: req.body.title,
+            description: req.body.description,
+            cost: req.body.cost
+            });
+
+            project.save(function(err) {
+                if(err) {
+                    res.send(err);
+                    return
+                }res.json({message: "New Project Created!"});
+            });
+        });
+
+
+
+    api.route('/project')
+
+        .get(function(req, res) {
+
+            Project.find({ host: req.decoded.id }, function(err, projects) {
+
+                if(err) {
+                    res.send(err);
+                    return;
+                }
+
+                res.send(projects);
+            });
+        });
 
     api.get('/me', function(req, res) {
         res.send(req.decoded);
