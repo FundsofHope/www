@@ -1,0 +1,52 @@
+
+
+<div class="jumbotron" style="background-color: #2c3e50; color:#c6c9cc">
+<div class="container">
+ <div class="col-md-3 col-sm-4" style="background-color: #2c3e50;">
+
+ <dl>
+  <dt>Why</dt>
+  <dd>Microsoft</dd>
+  <dd>Vodafone</dd>
+  <dd>Zomato</dd>
+  <dd>Sony</dd>
+</dl>	
+ 
+ </div>
+<div class="col-md-3 col-sm-4" style="background-color: #2c3e50;">
+ 
+ <dl>
+  <dt>How</dt>
+  <dd>Microsoft</dd>
+  <dd>Vodafone</dd>
+  <dd>Zomato</dd>
+  <dd>Sony</dd>
+</dl>	
+ 
+ </div>
+ <div class="col-md-3 col-sm-4" style="background-color: #2c3e50;">
+ 
+ <dl>
+  <dt>Support</dt>
+  <dd>Microsoft</dd>
+  <dd>Vodafone</dd>
+  <dd>Zomato</dd>
+  <dd>Sony</dd>
+</dl>	
+ 
+ </div>
+ <div class="col-md-3 col-sm-4" style="background-color: #2c3e50;">
+ 
+ <dl>
+  <dt>Contact Us</dt>
+  <dd>Microsoft</dd>
+  <dd>Vodafone</dd>
+  <dd>Zomato</dd>
+  <dd>Sony</dd>
+</dl>	
+ 
+ </div>
+ 
+ </div>
+</div>
+
