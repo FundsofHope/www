@@ -30,7 +30,7 @@ $(document).ready(function(){
 
     $('#btn').click(function(){
         console.log("enter2");
-    $container.isotope('shuffle');
+    //$container.isotope('shuffle');
   });
 });
 
