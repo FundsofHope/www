@@ -38,8 +38,12 @@ app.use('/user', userapi);
 var ngoapi = require('./app/routes/ngoapi')(app, express);
 app.use('/ngo', ngoapi);
 
+app.get('/:getfile', function (req, res) {
+   res.sendFile(__dirname + '/public/app/views/' + req.params.getfile);
+});
+
 app.get('*', function(req, res) {
-    res.sendFile(__dirname + '/public/views/index.html');
+    res.sendFile(__dirname + '/public/app/views/index.html');
 });
 
 app.listen(config.port, function(err) {
