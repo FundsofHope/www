@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FundsofHope::Home</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="css/bootstrap.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+          <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+          <script type="text/javascript" src="dynamic-cards.js"></script>
+          <script type="text/javascript" src="/bower_components/jquery.isotope.min/jquery.isotope.min.js"></script>
+          <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+          <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+          <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+          <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+          <link rel="import" href="bower_components/polymer/polymer.html">
+          <link rel="import" href="bower_components/paper-scroll-header-panel/paper-scroll-header-panel.html">
+          <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+          <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+          <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+          <link rel="import" href="bower_components/paper-styles/color.html">
+          <link rel="import" href="bower_components/paper-button/paper-button.html">
+          <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+          <link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html"> 
+          <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+          <link rel="import" href="bower_components/paper-card/paper-card.html">
+          <link rel="import" href="bower_components/paper-button/paper-button.html">
+          <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+          <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">  
+          <link rel="import" href="bower_components/iron-icons/hardware-icons.html">
+          <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+          <link rel="import" href="bower_components/paper-styles/color.html">  
+          <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html"> 
+          <link rel="import" href="bower_components/paper-ripple/paper-ripple.html"> 
+
+  <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+  <script type="text/javascript" src="engine1/jquery.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="./js/angular.js"></script>
+<script src="./controller.js"></script>
+<link src="./search_style.css"></link>
+
+<style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+   width: 100%;
+  height: 30%;
+  max-height: 440px;
+      margin: auto;
+  }
+      #cards {
+      @apply(--layout-relative);
+      @apply(--center-justified);
+      margin-top: 0%;
+      margin-left: 0%;
+      margin-right: 0%;
+    overflow: auto; 
+    } 
+        #paper-card{
+      margin-top: 2%;
+      margin-left: 2%; 
+      margin-right: 2%;
+      width: 300px;
+    }
+    .isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+    #image{
+      height: 200px;
+      background-image: url("images/1.jpg");
+    }
+        #home-icon{
+      float: right;
+      bottom: 36px;
+    } 
+    #btn{
+      margin-left: 45%;
+      background: #00695C;
+    }
+  </style>
+ 
+
+
+
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="home.html">FundsofHope</a>
+    </div>
+<!-- Left navbar -->
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+	  
+        
+
+		<li class="dropdown" >
+          <a href="stheh.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Share The Happiness <span class="sr-only">(current)</span><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="stheh.html">Initiate</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="stheh2.html">Explore And Contribute</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="stheh3.html">Be A Part</a></li>
+          </ul>
+        </li>
+		
+	  <li><a href="pog.html">Partners Of Growth</a></li>
+		<li><a href="faq.html">FAQs</a></li>
+		<li><a href="help.html">Help</a></li>
+      <!--  <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+		-->
+      </ul>
+      
+	   <!-- Searchbar -->
+	  <form class="navbar-form navbar-right .pull-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Spread Happiness">
+        </div>
+        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>&nbsp;Search</button>
+      </form>
+       
+	   <ul class="nav navbar-nav navbar-right">
+      
+
+	  <li><a href="#myModal" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span>&nbsp;Sign Up</a></li>
+		
+        
+
+		<li><a href="#myModal1" data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a></li>
+      
+	  
+	  </ul>  
+
+			 
+ </div><!-- /.container-fluid -->
+ </div>
+</nav>
+
+
+<div class="modal fade" id="myModal">
+	<div class="modal-dialog">
+      <div class="modal-content">
+        
+		
+		<div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">Sign Up</h4>
+        </div>
+        
+		
+		
+		
+		<div class="modal-body">
+         
+<form>
+
+		 <div class="form-group">
+    		<label for="exampleInputEmail1">Email address</label>
+    		<input class="form-control" id="exampleInputEmail1" placeholder="Enter email" type="email">
+  		  </div>
+		  
+		<div class="form-group">
+		  	<label for="exampleInputPassword1">Password</label>
+			<input class="form-control" id="exampleInputPassword1" placeholder="Password" type="password">
+		  </div>
+         		<div class="form-group">
+		  	<label for="exampleInputPassword1">Confirm Password</label>
+			<input class="form-control" id="exampleInputPassword1" placeholder="Password" type="password">
+		  </div>
+		  
+		  <button type="button" class="btn btn-primary">Sign Up</button>
+		  <h4>Sign in with third party account</h4>
+
+<button type="button" class="btn btn-info"><i class="fa fa-twitter"></i>
+&nbsp;Signin with Twitter</button>
+
+<button type="button" class="btn btn-primary"><i class="fa fa-facebook"></i>
+&nbsp;Signin with Facebook</button>
+
+<button type="button" class="btn btn-warning"><i class="fa fa-google-plus"></i>
+&nbsp;Signin with Google</button>
+
+
+</form>
+
+		  </div>
+		
+		
+		
+		
+		
+		
+		
+        </div>
+		
+	
+		
+		
+		
+		
+      </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="myModal1">
+<div class="modal-dialog">
+      <div class="modal-content">
+        
+		
+		<div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title">Sign In</h4>
+        </div>
+        
+		
+		
+		
+		<div class="modal-body">
+         
+<form>
+
+		 <div class="form-group">
+    		<label for="exampleInputEmail1">Email address</label>
+    		<input class="form-control" id="exampleInputEmail1" placeholder="Enter email" type="email">
+  		  </div>
+		  
+		<div class="form-group">
+		  	<label for="exampleInputPassword1">Password</label>
+			<input class="form-control" id="exampleInputPassword1" placeholder="Password" type="password">
+		  </div>
+         		
+		  
+		  <button type="button" class="btn btn-primary">Sign In</button>
+		  <h4>Sign in with third party account</h4>
+
+<button type="button" class="btn btn-info"><i class="fa fa-twitter"></i>
+&nbsp;Signin with Twitter</button>
+
+<button type="button" class="btn btn-primary"><i class="fa fa-facebook"></i>
+&nbsp;Signin with Facebook</button>
+
+<button type="button" class="btn btn-warning"><i class="fa fa-google-plus"></i>
+&nbsp;Signin with Google</button>
+
+
+</form>
+</div></div>
+		  </div>
+
+</div>
+
+<div style="background-color: black;">
+
+
+
+<!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
+  <div id="wowslider-container1">
+  <div class="ws_images"><ul>
+    <li><img src="data1/images/new3.jpg" alt="For A Better Tomorrow" title="For A Better Tomorrow" id="wows1_0"/></li>
+    <li><img src="data1/images/new5.jpg" alt="For Ambition" title="For Ambition" id="wows1_1"/></li>
+    <li><img src="data1/images/new6.jpg" alt="For Dreams" title="For Dreams" id="wows1_2"/></li>
+    <li><a href="http://wowslider.com"><img src="data1/images/new2.jpg" alt="jquery slider" title="For Opportunities" id="wows1_3"/></a></li>
+    <li><img src="data1/images/new1.jpg" alt="For Hope" title="For Hope" id="wows1_4"/></li>
+  </ul></div>
+  <div class="ws_bullets"><div>
+    <a href="#" title="For A Better Tomorrow"><span><img src="data1/tooltips/new3.jpg" alt="For A Better Tomorrow"/>1</span></a>
+    <a href="#" title="For Ambition"><span><img src="data1/tooltips/new5.jpg" alt="For Ambition"/>2</span></a>
+    <a href="#" title="For Dreams"><span><img src="data1/tooltips/new6.jpg" alt="For Dreams"/>3</span></a>
+    <a href="#" title="For Opportunities"><span><img src="data1/tooltips/new2.jpg" alt="For Opportunities"/>4</span></a>
+    <a href="#" title="For Hope"><span><img src="data1/tooltips/new1.jpg" alt="For Hope"/>5</span></a>
+  </div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com/vi">bootstrap slider</a> by WOWSlider.com v8.6</div>
+  <div class="ws_shadow"></div>
+  </div>  
+  <script type="text/javascript" src="engine1/wowslider.js"></script>
+  <script type="text/javascript" src="engine1/script.js"></script>
+  <!-- End WOWSlider.com BODY section -->
+
+
+
+
+  
+</div>
+<!-- jumbotron -->
+
+
+<div class="jumbotron" style="background-color: #00897B;">
+
+
+<div class="container">
+
+<column>
+<div class="col-md-3 col-sm-2 col-lg-2" style="background: #00897B; margin-right: 4%;">
+<a href="#" class="thumbnail" style="background-color:#00897B; border-color: #00897B;">
+<img id="img1" src="images/ngologos/1.jpe">
+</a>
+</div>
+
+<div class="col-md-3 col-sm-2 col-lg-2" style="background-color: #00897B; margin-right: 4%;">
+<a href="#" class="thumbnail" style="background-color:#00897B; border-color: #00897B;">
+<img id="img2" src="images/ngologos/2.jpg">
+</a>
+</div>
+
+<div class="col-md-3 col-sm-2 col-lg-2" style="background: #00897B; margin-right: 4%;">
+<a href="#" class="thumbnail" style="background-color:#00897B; border-color: #00897B;">
+<img id="img3" src="images/ngologos/3.jpg">
+</a>
+</div>
+
+
+<div class="col-md-3 col-sm-2 col-lg-2" style="background: #00897B; margin-right: 4%;">
+<a href="#" class="thumbnail" style="background-color:#00897B; border-color: #00897B;">
+<img id="img4" src="images/ngologos/5.jpg">
+</a>
+</div>
+
+
+<div class="col-md-3 col-sm-2 col-lg-2" style="background: #00897B; margin-right:;">
+<a href="#" class="thumbnail" style="background-color:#00897B; border-color: #00897B;">
+<img id="img5" src="images/ngologos/6.jpg">
+</a>
+</div>
+
+</column>
+
+
+</div>
+
+
+
+</div>
+
+
+<!-- app space-->
+  
+<div class="jumbotron" style="background-color: #004D40;">
+<div class="container" style="color: #362f2d;">
+        <div id="cards" style="width: 100%;">
+          <paper-card elevation="6" id="paper-card"></paper-card>
+        </div>
+        </div>
+        <div id="beta" class="container"></div>
+        <div>
+        <paper-button id="btn" ripple>load more</paper-button>
+      </div>
+</div>
+
+
+
+
+
+
+
+<div class="jumbotron" style="background-color: #2c3e40; color:#c6c9cc">
+<div class="container">
+ <div class="row">
+ <div class="col-md-3 col-sm-4" style="background-color: #2c3e40;">
+
+ <dl>
+  <dt>Why Donate</dt>
+  <dd><a href="index.html">Home</a></dd>
+  <dd><a href="stheh.html">Initiate</a></dd>
+  <dd><a href="stheh2.html">Explore</a></dd>
+  <dd><a href="stheh3.html">Be A Part</a></dd>
+</dl>	
+ 
+ </div>
+<div class="col-md-3 col-sm-4" style="background-color: #2c3e40;">
+ 
+ <dl>
+  <dt>How To Help</dt>
+  <dd><a href="help.html">Help</a></dd>
+  <dd><a href="beango.html">Register As A NGO</a></dd>
+  <dd><a href="beap.html">Register As A Partner</a></dd>
+  <dd><a href="index.html">Browse Projects</a></dd>
+</dl>	
+ 
+ </div>
+ <div class="col-md-3 col-sm-4" style="background-color: #2c3e40;">
+ 
+ <dl>
+  <dt>Support</dt>
+  <dd><a href="pog.html">Our Partners</a></dd>
+  <dd><a href="#">Our NGOs</a></dd>
+  <dd><a href="faq.html">FAQs</a></dd>
+</dl>	
+ 
+ </div>
+ <div class="col-md-3 col-sm-4" style="background-color: #2c3e40;">
+ 
+ <dl>
+ <dt>Contact Us</dt>
+   <dd><a href="faq-writetous.html">Write To Us</a></dd>
+  
+
+
+</dl>	
+
+ </div>
+  </div>
+  
+  
+ <div class="row">
+ 
+ <div style="background-color: #2c3e40;">
+ 
+ <div class="col-sm-3">
+ </div>
+ 
+<div class="col-sm-2">
+   <a href="#">Facebook &nbsp;</a> <i class="fa fa-facebook fa-2x"></i>
+</div> 
+ 
+<div class="col-sm-2">
+  <a href="#">Google Plus &nbsp;</a><i class="fa fa-google-plus fa-2x"></i>
+  </div>
+  
+  <div class="col-sm-2">
+  <a href="#">Youtube &nbsp;</a><i class="fa fa-youtube fa-2x"></i>
+ </div>
+ 
+ <div class="col-sm-3">
+ </div>
+ 
+ </div>
+ </div>
+ 
+ 
+
+ </div>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+h1{
+	color: blue;
+}
+
+paper-button{
+	background: red;
+	font-family: sans-serif;
+}
+
+.title{
+	background-color: blue;
+	padding: 0px 0px 0px 0px;
+}

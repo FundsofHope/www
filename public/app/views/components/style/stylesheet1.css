@@ -1,0 +1,78 @@
+  .tall {
+	overflow: -moz-scrollbars-vertical; 
+	overflow-y: scroll;
+	}
+  .main{
+  	height: 21.8%;
+  	background-image: url("../images/img1.jpg");
+  }
+  #logo-back{
+  	font-family: sans-serif;
+  	font-size: 35px;
+  }
+  #list li{
+  	font-size: 20px;
+  	font-family: georgia;
+  	list-style: none;
+  	text-decoration: none;
+  	margin-bottom: 4px;
+  }
+  .flex{
+  	font-size: 30px;
+  }
+  	paper-icon-button{
+  		float: right;
+  		margin-top: 10px;
+  		color: white;
+  	}
+    #cards {
+      @apply(--layout-vertical);
+      @apply(--center-justified);
+      elevation: 6px;
+      max-width: 300px;
+      margin-top: 10%;
+      margin-left: 5%;
+      margin-right: auto;
+      display: :inline-block;
+    }
+
+    paper-card {
+      width: 100%;
+      margin-bottom: 16px;
+      display: :inline-block;
+      float:left;
+    }
+    .card-content{
+    	background-color: white;
+    } 	
+    .card-actions{
+    	background-color: white;
+    }
+    #image{
+    	height: 150px;
+    	background-image: url("images/img1.jpg");
+    }
+    .card-actions paper-icon-button{
+
+    	color: blue;
+    }
+    #project-name{
+    	color: white;
+    	font-size: 20px;
+    	margin-bottom: 0;
+    }
+    #home-icon{
+    	float: right;
+    	bottom: 36px;
+    }
+    #text-area{
+            @apply(--layout-horizontal);
+            @apply(--layout-center-justified);
+            font-size: 18px;
+            font-family: ;
+            margin-left: 8%;
+            margin-right: 0%;
+    }    
+    #text-area p{
+    	margin-left: 8%;
+    }
