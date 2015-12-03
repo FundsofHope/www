@@ -71,6 +71,8 @@ module.exports = function(app, express) {
             var project = new Project({
                 host: req.params.ngoid,
                 description: req.body.description,
+                title: req.body.title,
+                cost: req.body.cost
             });
 
             project.save(function(err) {
