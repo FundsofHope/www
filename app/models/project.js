@@ -7,7 +7,7 @@ var Schema = mongoose.Schema;
 
 var projectSchema = new Schema({
 
-    host: {type: Schema.Types.ObjectId, ref: 'Ngo'},
+    host: String,
     title: String,
     desciption: String,
     created: {type: Date, default: Date.now()},
