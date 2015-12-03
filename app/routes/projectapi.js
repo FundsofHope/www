@@ -26,7 +26,7 @@ module.exports = function (app, express){
                 res.json(obj);
             });
 
-    })
+    });
 
     return api;
 

@@ -1,4 +1,5 @@
 var Ngo = require('../models/ngo');
+var Project = require('../models/project')
 var config = require('../../config');
 
 var secret = config.secretKey;
@@ -70,7 +71,6 @@ module.exports = function(app, express) {
             var project = new Project({
                 host: req.params.ngoid,
                 description: req.body.description,
-
             });
 
             project.save(function(err) {
@@ -85,14 +85,14 @@ module.exports = function(app, express) {
 
         .get(function(req, res) {
 
-            Project.find({ host: req.params.ngoid }, function(err, stories) {
+            Project.find({ host: req.params.ngoid }, function(err, obj) {
 
                 if(err) {
                     res.send(err);
                     return;
                 }
 
-                res.send(stories);
+                res.send(obj);
             });
         });
 
