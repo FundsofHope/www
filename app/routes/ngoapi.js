@@ -12,7 +12,7 @@ function createToken(ngo) {
         name: ngo.name,
         ngoid: ngo.ngoid
     }, secret, {
-        expirtesInMinute: 1440
+        expirtesInMinute: 180
     });
 
     return token;
@@ -28,7 +28,10 @@ module.exports = function(app, express) {
         var ngo = new Ngo({
             name: req.body.name,
             ngoid: req.body.ngoid,
-            password: req.body.password
+            password: req.body.password,
+            email: req.body.email,
+            address: req.body.address,
+            phone: req.body.phone
         });
 
         ngo.save(function(err) {
@@ -51,6 +54,48 @@ module.exports = function(app, express) {
         });
 
     });
+
+    api.get('/:ngoid', function(req, res){
+
+        Ngo.findOne({ ngoid: req.params.ngoid }, function(req, obj){
+            res.json(obj);
+        });
+
+    });
+
+    api.route('/:ngoid/project')
+
+        .post(function(req, res) {
+
+            var project = new Project({
+                host: req.params.ngoid,
+                description: req.body.description,
+
+            });
+
+            project.save(function(err) {
+                if(err) {
+                    res.send(err);
+                    return
+                }
+                res.json({message: "New Project Created!"});
+            });
+        })
+
+
+        .get(function(req, res) {
+
+            Project.find({ host: req.params.ngoid }, function(err, stories) {
+
+                if(err) {
+                    res.send(err);
+                    return;
+                }
+
+                res.send(stories);
+            });
+        });
+
 
     api.post('/login', function(req, res){
 
@@ -111,9 +156,9 @@ module.exports = function(app, express) {
         res.json({message: "Welcome to Home!"});
     });
 
-    api.get('/me', function(req, res) {
-        res.send(req.decoded);
-    });
+    //api.get('/me', function(req, res) {
+    //res.send(req.decoded);
+    //});
 
 
     return api;

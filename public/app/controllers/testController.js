@@ -1,36 +1,35 @@
-var myApp = angular.module("myApp", []);
-// var items = angular.module("iApp", []);
+var testApp = angular.module("testApp", []);
 
-
-myApp.controller("namescontroller", function namescontroller($scope, $http){
+testApp.controller("namescontroller", function namescontroller($scope, $http){
 
 	$http.get('./components/componentsJS/json/project-1.json').success(function(data){
 		$scope.names1= data;
-	})
+	});
 	$http.get('./components/componentsJS/json/project-2.json').success(function(data){
 		$scope.names2= data;
-	})
+	});
 	$http.get('./components/componentsJS/json/project-3.json').success(function(data){
 		$scope.names3= data;
-	})
+	});
 	$http.get('./components/componentsJS/json/project-4.json').success(function(data){
 		$scope.names4= data;
-	})
+	});
 	$http.get('./components/componentsJS/json/project-5.json').success(function(data){
 		$scope.names5= data;
-	})
+	});
 	$http.get('./components/componentsJS/json/project-6.json').success(function(data){
 		$scope.names6= data;
-	})
+	});
 
-	
-/*	$http.get('./js/project-1.json').success(function(articles){
-		var abc=articles.users;
-		for (var i = 0; i <abc.length; i++) {
-		$scope.name= articles.data.users;
-		};	
-	})*/
 });
+
+/*	$http.get('./js/project-1.json').success(function(articles){
+ var abc=articles.users;
+ for (var i = 0; i <abc.length; i++) {
+ $scope.name= articles.data.users;
+ };
+ })*/
+
 /*	var myApp = angular.module("myApp", []);
 var names = new Array();
 myApp.controller("namescontroller", function namescontroller($scope, $http){
@@ -41,6 +40,7 @@ jsonFactory.getOtherStuff().then(function (response) {
     console.error(error);
   });
 }); */
+
 /*angular.module('myApp', []).controller('namescontroller', ['$scope', 'articleDataService',  function($scope, articleDataService){
   // when promise is resolved, set the scope variable
   articleDataService.getArticles().then(function(articles){

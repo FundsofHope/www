@@ -8,9 +8,12 @@ var Schema = mongoose.Schema;
 
 var ngoSchema = new Schema({
 
-    name: String,
+    name: {type: String, required: true},
     ngoid: { type: String, required: true, index: { unique: true } },
-    password: { type: String, required: true, select: false }
+    password: { type: String, required: true, select: false },
+    email: String,
+    address: {type: String},
+    phone: Number
 
 });
 

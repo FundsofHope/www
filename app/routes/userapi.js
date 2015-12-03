@@ -29,7 +29,9 @@ module.exports = function(app, express) {
         var user = new User({
             name: req.body.name,
             username: req.body.username,
-            password: req.body.password
+            password: req.body.password,
+            email: req.body.email,
+            phone:req.body.phone
         });
 
         user.save(function(err) {
@@ -41,17 +43,17 @@ module.exports = function(app, express) {
         });
     });
 
-    api.get('/all', function(req, res){
-
-        User.find({}, function(err, users){
-            if(err){
-                res.send(err);
-                return;
-            }
-            res.json(users);
-        });
-
-    });
+    //api.get('/all', function(req, res){
+    //
+    //    User.find({}, function(err, users){
+    //        if(err){
+    //            res.send(err);
+    //            return;
+    //        }
+    //        res.json(users);
+    //    });
+    //
+    //});
 
     api.post('/login', function(req, res){
 
@@ -112,9 +114,17 @@ module.exports = function(app, express) {
         res.json({message: "Welcome to Home!"});
     });
 
-    api.get('/me', function(req, res) {
-        res.send(req.decoded);
+    api.get('/:user', function(req, res){
+
+        Ngo.findOne({ username: req.params.user }, function(req, obj){
+            res.json(obj);
+        });
+
     });
+
+    //api.get('/me', function(req, res) {
+        //res.send(req.decoded);
+    //});
 
     return api;
 

@@ -38,6 +38,9 @@ app.use('/user', userapi);
 var ngoapi = require('./app/routes/ngoapi')(app, express);
 app.use('/ngo', ngoapi);
 
+var projapi = require('./app/routes/projectapi')(app, express);
+app.use('/project', projapi);
+
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/public/app/views/index.html');
 });
