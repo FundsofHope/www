@@ -1,5 +1,4 @@
-var Ngo = require('../models/ngo');
-var Project = require('../models/project')
+var Ngo = require('../models/ngo'); var Project = require('../models/project')
 var config = require('../../config');
 
 var secret = config.secretKey;
