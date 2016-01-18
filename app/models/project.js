@@ -12,8 +12,9 @@ var projectSchema = new Schema({
     desciption: String,
     created: {type: Date, default: Date.now()},
     cost: Number,
-    full: Number
-
+    full: Number,
+	imageURL: String
+	
 });
 
 module.exports = mongoose.model('Project', projectSchema);

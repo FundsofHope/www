@@ -72,7 +72,9 @@ module.exports = function(app, express) {
                 host: req.params.ngoid,
                 description: req.body.description,
                 title: req.body.title,
-                cost: req.body.cost
+                cost: req.body.cost,
+                imageURL: req.body.img;
+                full: req.body.full;
             });
 
             project.save(function(err) {
