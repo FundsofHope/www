@@ -74,7 +74,7 @@ module.exports = function(app, express) {
                 title: req.body.title,
                 cost: req.body.cost,
                 imageURL: req.body.imageURL,
-                full: req.body.full;
+                full: req.body.full
             });
 
             project.save(function(err) {
