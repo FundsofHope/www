@@ -73,8 +73,7 @@ module.exports = function(app, express) {
                 description: req.body.description,
                 title: req.body.title,
                 cost: req.body.cost,
-                imageURL: req.body.imageURL,
-                full: req.body.full
+                imageURL: req.body.imageURL
             });
 
             project.save(function(err) {
