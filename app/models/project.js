@@ -9,7 +9,8 @@ var projectSchema = new Schema({
 
     host: String,
     title: String,
-    desciption: String,
+    description: String,
+    imageURL: String,
     created: {type: Date, default: Date.now()},
     cost: Number,
     full: Number
