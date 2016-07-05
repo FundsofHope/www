@@ -32,5 +32,8 @@
     "public/vendor",
     "test",
     "tests"
-  ]
+  ],
+  "resolutions": {
+    "paper-styles": "^1.0.0"
+  }
 }
