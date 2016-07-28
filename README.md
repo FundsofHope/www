@@ -1,3 +1,4 @@
-__Source for the Website FunsofHope.org__
+### Source for the Website [FunsofHope.org](http://fundsofhope.org)
 
-Still Under Development
+Not Under Active Development.
+Moved to a Django based REST Backend Service.
